@@ -1,0 +1,16 @@
+<%= form_for @conn, Routes.session_path(@conn, :create), fn f -> %>
+  <label>
+    Email: <%= text_input f, :email %>
+  </label>
+
+  <label>
+    Password: <%= password_input f, :password %>
+  </label>
+
+  <%= submit "Sign in" %>
+<% end %>
+
+<div>
+  <p>Don't have an account?</p>
+  <%= link "Create an account", to: Routes.user_path(@conn, :new) %>
+</div>
