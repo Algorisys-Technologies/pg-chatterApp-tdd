@@ -21,4 +21,11 @@ defmodule ChatterWeb.SessionController do
         |> redirect(to: "/")
     end
   end
+
+  def delete(conn, _params) do
+    conn
+    |> Doorman.Login.Session.logout()
+    |> redirect(to: "/")
+
+  end
 end

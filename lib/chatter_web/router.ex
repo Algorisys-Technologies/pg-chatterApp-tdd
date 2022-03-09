@@ -32,7 +32,7 @@ defmodule ChatterWeb.Router do
     pipe_through :browser
 
     get "/sign_in", SessionController, :new
-    resources "/sessions", SessionController, only: [:create]
+    resources "/sessions", SessionController, only: [:create, :delete]
     resources "/users", UserController, only: [:new, :create]
   end
 

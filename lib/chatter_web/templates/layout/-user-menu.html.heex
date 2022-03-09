@@ -1,0 +1,8 @@
+<ul>
+<%= if @conn.assigns[:current_user] do %>
+    <li style="color:green"><%= @current_user.email %></li>
+    <li><%= link "Log out" , to: Routes.session_path(@conn, :delete, @current_user.id), method: :delete %></li>
+<% else %>
+    -
+<% end %>
+</ul>
