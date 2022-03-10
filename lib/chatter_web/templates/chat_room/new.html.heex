@@ -1,5 +1,6 @@
 <div>
   <%= form_for @changeset, Routes.chat_room_path(@conn, :create), fn f -> %>
+  <h4> Add new chat room</h4>
     <label>
       Name:
       <%= error_tag f, :name %>
